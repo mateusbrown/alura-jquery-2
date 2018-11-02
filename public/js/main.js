@@ -7,6 +7,14 @@ $(function() {
     inicializaCronometro();
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
+    atualizaPlacar();
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
+    $("#tootip").tooltipster({
+        trigger: "custom"
+    });
 });
 
 function atualizaTamanhoFrase() {
@@ -81,3 +89,4 @@ function atualizaTempoInicial(tempo){
     tempoInicial = tempo;
     $("#tempo-digitacao").text(tempo);
 }
+
